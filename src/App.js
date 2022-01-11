@@ -1,5 +1,6 @@
 import React from "react";
 import { Btn } from "./components/button/Button.styled";
+import { InputSearch } from "./components/input/Input.styled";
 
 const App = () => {
     return (
@@ -7,7 +8,7 @@ const App = () => {
         <div>
             <h1> GitHub Search App </h1>
 
-            <input type="text" placeholder="user search" />
+            <InputSearch placeholder="Search user" size='18px'/>
 
             <Btn>
                 Search
