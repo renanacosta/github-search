@@ -1,27 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const GlobalContext = React.createContext();
 
-export const User = ({ children }) => {
-    const [user, setUser] = React.useState(null);
-    const [showUser, setShowUser] = React.useState(false);
-    const [showRepos, setShowRepos] = React.useState(false);
-    const [showStarred, setShowStarred] = React.useState(false);
-    const [message, setMessage] = React.useState(null);
+export const UserGlobalContext = ({ children }) => {
+    const [username, setUsername] = useState("");
+    const [repositories, setRepositories] = useState([]);
+    const [profile, setProfile] = useState({});
+    const [favorites, setFavorites] = useState([]);
+    const [image, setImage] = useState("");
 
     return (
         <GlobalContext.Provider
             value={{
-                user,
-                setUser,
-                showUser,
-                setShowUser,
-                showRepos,
-                setShowRepos,
-                showStarred,
-                setShowStarred,
-                message,
-                setMessage,
+               username, setUsername, 
+               repositories, setRepositories, 
+               profile, setProfile, 
+               favorites, setFavorites,
+                image, setImage
             }}
         >
             {children}
