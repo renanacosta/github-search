@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { InputSearch } from './Input.styled';
 
-const Input = ({ size, placeholder, value, onChange }) => {
+const Input = ({ size, placeholder, value, onChange, onKeyUp }) => {
     return (
         <>
             <InputSearch
@@ -10,6 +10,7 @@ const Input = ({ size, placeholder, value, onChange }) => {
                 placeholder={placeholder}
                 defaultValue={value}
                 onChange={onChange}
+                onKeyUp={onKeyUp}
             />
         </>
     );

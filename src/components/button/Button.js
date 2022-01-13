@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Button = ({ onClick, type, text, size, padding, width }) => {
     switch (size) {
         case 'medium':
-            padding = '10px 15px';
+            padding = '10px 30px';
             width = '125px';
             break;
         case 'large':
@@ -17,7 +17,7 @@ const Button = ({ onClick, type, text, size, padding, width }) => {
             width = '200px';
             break;
         default:
-            padding = '10px';
+            padding = '20px';
             width = '100px';
             break;
     }
