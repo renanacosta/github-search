@@ -12,6 +12,7 @@ const Login = () => {
   };
   return (
     <BoxLogin>
+
       <div>              
         <img
           src={assets}

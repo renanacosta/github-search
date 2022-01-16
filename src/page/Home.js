@@ -17,6 +17,7 @@ import {
 import Logo from '../assets/logo.svg';
 import Loading from '../loading/Loading';
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -80,7 +81,7 @@ const Home = () => {
 
  
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('logIn'));
+    const user = JSON.parse(localStorage.getItem('login'));
     console.log(user);
   }, []);
   return (
@@ -163,6 +164,7 @@ const Home = () => {
           })}
         </FavoriteList>
       )}
+      <Footer />
     </Container>
   );
 };

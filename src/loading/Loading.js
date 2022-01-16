@@ -1,8 +1,11 @@
 import React from 'react';
-import { LoopCircleLoading, RotateCircleLoading } from 'react-loadingg';
+import { LoopCircleLoading } from 'react-loadingg';
 
 // const Loading = () => <RotateCircleLoading />;
-const Loading = () => <LoopCircleLoading />;
-
+const Loading = () => {
+    return (
+        <LoopCircleLoading color='#ac00f7'/>
+    );
+}
 
 export default Loading;
