@@ -84,11 +84,3 @@ export const UserData = styled.div`
     text-align: center;
   }
 `;
-
-export const BoxLogout = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #ac00f7;
-border-radius: 30px;
-`;
