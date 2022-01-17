@@ -11,6 +11,7 @@ const Header = () => {
         // botao de logout
         <BoxLogout>
             <img src={assets}
+                data-testid="logout"
                 onClick={LogOut}
                 alt='logout'
                 title='Logout'

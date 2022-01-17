@@ -15,8 +15,8 @@ Button.args = {
     size: "medium",
     padding: "20px",
     width: "100px",
-    color: "",
-    background: "red",
+    color: "#FFF",
+    background: "#ac00f7",
 };
 
     
