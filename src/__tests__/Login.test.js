@@ -9,6 +9,12 @@ describe ('Login', () => {
         const { container } = render(<Login />);
         expect(container).toBeTruthy();
     });
+
+    it('should render the logInGitHub', () => {
+        const { getByTestId } = render(<Login />);
+        const logInGitHub = getByTestId('logInGitHub');
+        expect(logInGitHub).toBeInTheDocument();
+    })
 });
 
 

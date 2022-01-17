@@ -22,8 +22,9 @@ const Login = () => {
   return (
     <BoxLogin>
 
-      <div>              
+      <div>
         <img
+          data-testid="logInGitHub"
           src={assets}
           alt='logo'
           onClick={GithubLogin}
