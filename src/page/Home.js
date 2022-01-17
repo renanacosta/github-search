@@ -12,7 +12,7 @@ import {
   FavoriteList,
   BoxImage,
   PictureUser,
-  UserData
+  UserData,
 } from './Home.styled';
 import Logo from '../assets/logo.svg';
 import Loading from '../loading/Loading';
@@ -60,7 +60,6 @@ const Home = () => {
   const getProfile = () => {
     ProfileUser(username).then((res) => {
       setImage(res.avatar_url);
-      console.log(res);
       setProfile(res);
     });
   };
@@ -79,14 +78,18 @@ const Home = () => {
     });
   };
 
- 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('login'));
-    console.log(user);
-  }, []);
+    localStorage.setItem('login', JSON.stringify(username));
+    localStorage.setItem('image', JSON.stringify(image));
+    localStorage.setItem('profile', JSON.stringify(profile));
+    localStorage.setItem('repositories', JSON.stringify(repositories));
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [
+    username, image, profile, repositories, favorites
+  ]);
   return (
     <Container>
-      <Header/>
+      <Header />
       <BoxSearch>
         <BoxImage>
           <ImageLogo src={Logo} alt='logo' />
@@ -98,7 +101,10 @@ const Home = () => {
           }}
           placeholder='Search user'
           size='18px'
-          onChange={(e) => setUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)
+
+          }
+
         />
 
         <BoxButton>
@@ -110,6 +116,10 @@ const Home = () => {
             onClick={() => {
               getRepositories();
               getProfile();
+              localStorage.setItem('login', JSON.stringify(username));
+              localStorage.setItem('image', JSON.stringify(image));
+              localStorage.setItem('profile', JSON.stringify(profile));
+              localStorage.setItem('repositories', JSON.stringify(repositories));
             }}
           />
 
@@ -121,6 +131,10 @@ const Home = () => {
             onClick={() => {
               getFavorites();
               getProfile();
+              localStorage.setItem('login', JSON.stringify(username));
+              localStorage.setItem('image', JSON.stringify(image));
+              localStorage.setItem('profile', JSON.stringify(profile));
+              localStorage.setItem('favorites', JSON.stringify(favorites));
             }}
           />
         </BoxButton>

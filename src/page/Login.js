@@ -9,6 +9,15 @@ const Login = () => {
   const GithubLogin = () => {
     setLoading(true);
     window.open('http://localhost:5000/auth/github', '_self');
+
+    localStorage.setItem('github', 'true');
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'github') {
+        setLoading(false);
+      }
+    }
+    );
+
   };
   return (
     <BoxLogin>

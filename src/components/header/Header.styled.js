@@ -7,6 +7,8 @@ export const BoxLogout = styled.div`
     background-color: #000;
     width: 100vw;
     padding: 10px 0;
+    position: fixed;
+    top: 0;
     `;
 
 

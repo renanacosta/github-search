@@ -7,5 +7,4 @@ export const BoxLogin = styled.div`
     flex-direction: column;
     background-color: #000;
     height: 100vh;
-    
     `;

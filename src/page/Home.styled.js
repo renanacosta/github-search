@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
+//imagem do logo Github search
 export const BoxImage = styled.div`
   display: flex;
   margin-top: 5%;
@@ -17,8 +17,9 @@ export const ImageLogo = styled.img`
   background: black;
   padding: 15px;
   border-radius: 10px;
-  margin: 10px auto;
   width: 250px;
+  margin-top: 30%;
+  margin-bottom: 10%;
 `;
 
 export const BoxSearch = styled.div`
@@ -45,7 +46,8 @@ export const RepositoriesList = styled.div`
   flex-direction: column;
   border: 1px solid #000;
   padding: 5px 10px;
-  margin: 10px auto;
+  margin-bottom: 100px;
+  /* margin: 10px auto; */
   border-radius: 10px;
   @media (max-width: 967px) {
     width: 80%;
@@ -58,7 +60,7 @@ export const FavoriteList = styled.div`
   flex-direction: column;
   border: 1px solid #000;
   padding: 5px 10px;
-  margin: 10px auto;
+  margin-bottom: 130px;
   border-radius: 10px;
   @media (max-width: 967px) {
     width: 80%;
