@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const InputSearch = styled.input`
-  background-color: white;
+  background: ${(props) => props.background};
   font-size: ${(props) => props.size};
-  height: 2.8em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  padding-left: 10px;
-  width: 150%;
-  border: 1px solid #000;
-  border-radius: 30px;
-  margin: 10px 0;
+  height: ${(props) => props.height};
+  display: ${(props) => props.display};
+  justify-content: ${(props) => props.justifyContent};
+  align-items: ${(props) => props.alignItems};
+  font-weight: ${(props) =>  props.fontWeight};
+  padding: ${(props) => props.paddingLeft};
+  width: ${(props) => props.width};
+  border: ${(props) => props.border};
+  border-radius: ${(props) => props.borderRadius};
+  margin: ${(props) => props.margin};
   @media (max-width: 567px) {
     width: 100%;
   }

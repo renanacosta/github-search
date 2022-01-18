@@ -2,13 +2,39 @@ import React from 'react';
 import { Btn } from './Button.styled';
 import PropTypes from 'prop-types';
 
-const Button = ({ onClick, type, text, size, padding, width, color, background, align }) => {
+const Button = ({ onClick,
+    text,
+    size,
+    align,
+    minHeight,
+    width,
+    color,
+    background,
+    borderRadius,
+    border,
+    boxShadow,
+    padding,
+    fontSize,
+    fontWeight,
+    cursor
+    
+}) => {
     switch (size) {
         case 'medium':
-            padding = '10px 30px';
-            width = '125px';
             align = 'center';
+            minHeight = '3.1em';
+            width = '150px';
+            borderRadius = '30px';
+            border = 'none';
+            boxShadow = '0px 0px 10px rgba(0, 0, 0, 0.9)';
+            padding = '10px';
+            fontSize = '1.2em';
+            fontWeight = 'bold';
+            cursor = 'pointer';
             break;
+            // padding = '10px 30px';
+            // width = '125px';
+            // align = 'center';
         case 'large':
             padding = '10px 20px';
             width = '150px';
@@ -29,13 +55,18 @@ const Button = ({ onClick, type, text, size, padding, width, color, background, 
     return (
         <Btn
             onClick={onClick}
-            type={type}
-            size={size}
-            padding={padding}
+            align={align}
+            minHeight={minHeight}
             width={width}
             color={color}
             background={background}
-            align={align}
+            borderRadius={borderRadius}
+            border={border}
+            boxShadow={boxShadow}
+            padding={padding}
+            fontSize={fontSize}
+            fontWeight={fontWeight}
+            cursor={cursor}
         >
             {text}
         </Btn>
@@ -43,18 +74,23 @@ const Button = ({ onClick, type, text, size, padding, width, color, background, 
 };
 
 Button.propTypes = {
-    type: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     size: PropTypes.string,
-    padding: PropTypes.string,
+    align: PropTypes.string,
+    minHeight: PropTypes.string,
     width: PropTypes.string,
     color: PropTypes.string,
     background: PropTypes.string,
-    align: PropTypes.string,
+    borderRadius: PropTypes.string,
+    border: PropTypes.string,
+    boxShadow: PropTypes.string,
+    padding: PropTypes.string,
+    fontSize: PropTypes.string,
+    fontWeight: PropTypes.string,
+    cursor: PropTypes.string
 };
 Button.defaultProps = {
-    type: 'Button',
-    size: '',
+    onclick
 };
 
 export default Button;

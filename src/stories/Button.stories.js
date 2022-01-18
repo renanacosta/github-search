@@ -10,13 +10,21 @@ const Template = (args) => <Btn {...args} />;
 
 export const Button = Template.bind({});
 Button.args = {
-    text: "Button",
-    type: "button",
-    size: "medium",
-    padding: "20px",
-    width: "100px",
-    color: "#FFF",
-    background: "#ac00f7",
-};
+    onClick: () => {},
+    text: 'button',
+    size: 'medium',
+    align: 'center',
+    minHeight: '3.1em',
+    width: '150%',
+    color: '#000',
+    background: 'white',
+    borderRadius: '30px',
+    border: 'none',
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.9)',
+    padding: '10px',
+    fontSize: '1.2em',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    margin: '10px 0'
 
-    
+};

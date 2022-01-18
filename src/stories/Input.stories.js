@@ -11,11 +11,18 @@ const Template = (args) => <Ipt {...args} />;
 export const Input = Template.bind({});
 Input.args = {
     size: "medium",
-    placeholder: 'placeholder',
-    defaultValue: 'value',
-    onChange: 'onChange',
-    onKeyUp: 'onKeyUp',
-
+    placeholder: 'input',
+    background: 'white',
+    height: '2.8em',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontWeight: 'bold',
+    padding: '10px',
+    width: '150%',
+    border: '1px solid #000',
+    borderRadius: '30px',
+    margin: '10px 0'
 };
 
 

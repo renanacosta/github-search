@@ -2,15 +2,36 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { InputSearch } from './Input.styled';
 
-const Input = ({ size, placeholder, value, onChange, onKeyUp }) => {
+const Input = ({ size,
+    placeholder,
+    background,
+    height,
+    display,
+    justifyContent,
+    alignItems,
+    fontWeight,
+    padding,
+    width,
+    border,
+    borderRadius,
+    margin
+}) => {
     return (
         <>
             <InputSearch
                 size={size}
                 placeholder={placeholder}
-                defaultValue={value}
-                onChange={onChange}
-                onKeyUp={onKeyUp}
+                background={background}
+                height={height}
+                display={display}
+                justifyContent={justifyContent}
+                alignItems={alignItems}
+                fontWeight={fontWeight}
+                padding={padding}
+                width={width}
+                border={border}
+                borderRadius={borderRadius}
+                margin={margin}
             />
         </>
     );
@@ -19,10 +40,33 @@ const Input = ({ size, placeholder, value, onChange, onKeyUp }) => {
 Input.propTypes = {
     size: PropTypes.string,
     placeholder: PropTypes.string,
+    background: PropTypes.string,
+    height: PropTypes.string,
+    display: PropTypes.string,
+    justifyContent: PropTypes.string,
+    alignItems: PropTypes.string,
+    fontWeight: PropTypes.string,
+    padding: PropTypes.string,
+    width: PropTypes.string,
+    border: PropTypes.string,
+    borderRadius: PropTypes.string,
+    margin: PropTypes.string,
 };
 
 Input.defaultProps = {
-    size: 'medium'
+    size: 'medium',
+    placeholder: 'input',
+    background: 'white',
+    height: '2.8em',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    fontWeight: 'bold',
+    padding: '10px',
+    width: '150%',
+    border: '1px solid #000',
+    borderRadius: '30px',
+    margin: '10px 0',
 };
 
 export default Input;

@@ -102,8 +102,22 @@ const Home = () => {
           placeholder='Search user'
           size='18px'
           onChange={(e) => setUsername(e.target.value)
-
           }
+        size= 'medium'
+        placeholder= 'Search user'
+        background= 'white'
+        height= '2.8em'
+        display= 'flex'
+        justifyContent= 'center'
+        alignItems= 'center'
+        fontWeight= 'bold'
+        padding= '10px'
+        width= '150%'
+        border= '1px solid #000'
+        borderRadius= '30px'
+        margin= '10px 0'
+
+
 
         />
 
@@ -111,7 +125,7 @@ const Home = () => {
           <Button
             color={'#FFF'}
             background={'#ac00f7'}
-            size='large'
+            size='medium'
             text='Repositories'
             onClick={() => {
               getRepositories();
@@ -126,7 +140,7 @@ const Home = () => {
           <Button
             color={'#FFF'}
             background={'#ac00f7'}
-            size='large'
+            size='medium'
             text='Favorites'
             onClick={() => {
               getFavorites();
